@@ -7,9 +7,12 @@ The purpose of the first iteration of this project is to run a basic express.js 
 
 ## Deploy
 
-Copy and paste the following command into your shell:
+1. Download the repository to a directory of your choosing.
 
-`sh <(curl -s http://<path to hello-world-deploy.sh)` 
+2. Navigate to the repo directory in your shell.
+
+3. Enter the command `sh hello-world-deploy.sh` into your shell.
+
 
 
 
