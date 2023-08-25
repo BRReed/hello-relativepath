@@ -11,7 +11,7 @@ The purpose of the first iteration of this project is to run a basic express.js 
 
 2. Navigate to the repo directory in your shell.
 
-3. Enter the command `sh hello-world-deploy.sh` into your shell.
+3. Enter the command `sh scripts/hello-world-deploy.sh` into your shell.
 
 
 
