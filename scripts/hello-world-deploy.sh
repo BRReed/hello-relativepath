@@ -1,10 +1,16 @@
 #!/bin/sh
 
-echo "-> Updating system"
-yes | pacman -Syu
-
-if ! ( which npm )
+if ( which npm )
 then
-  echo "-> Installing nodejs and npm"
-  yes | pacman -S nodejs npm
+  echo "-> npm is installed"
+else
+  echo "-> Installing npm"
+  yes | pacman -S npm
+fi
+
+if ( which node )
+then
+  echo "-> nodejs is installed"
+else
+  yes | pacman -S nodejs
 fi
