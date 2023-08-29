@@ -16,6 +16,6 @@ else
   yes | pacman -S nodejs
 fi
 
-npm install express
+npm install
 
 node hello-world-app.js
