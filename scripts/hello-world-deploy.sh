@@ -17,3 +17,5 @@ else
 fi
 
 npm install express
+
+node hello-world-app.js
