@@ -12,5 +12,10 @@ if ( which node )
 then
   echo "-> nodejs is installed"
 else
+  echo "-> Installing nodejs"
   yes | pacman -S nodejs
 fi
+
+npm install
+
+node hello-world-app.js
