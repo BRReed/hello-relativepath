@@ -6,6 +6,11 @@ if ( pacman -Qu )
 then
   echo "-> upgrading system"
   yes | pacman -Su
+else
+  echo "-> system is up to date"
+fi
+
+
 
 if ( which npm )
 then
