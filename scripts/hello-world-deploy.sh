@@ -2,15 +2,13 @@
 
 pacman -Sy
 
-if ( pacman -Qu )
+if  !( pacman -Qu )
 then
+  echo "-> system is up to date"
+else
   echo "-> upgrading system"
   yes | pacman -Su
-else
-  echo "-> system is up to date"
 fi
-
-
 
 if ( which npm )
 then
