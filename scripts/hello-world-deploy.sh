@@ -1,5 +1,15 @@
 #!/bin/sh
 
+pacman -Sy
+
+if  !( pacman -Qu )
+then
+  echo "-> system is up to date"
+else
+  echo "-> upgrading system"
+  yes | pacman -Su
+fi
+
 if ( which npm )
 then
   echo "-> npm is installed"

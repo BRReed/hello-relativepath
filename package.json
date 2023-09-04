@@ -1,0 +1,18 @@
+{
+    "name": "hello-world-app",
+    "version": "0.0.1",
+    "description": "basic expressjs app deployment tool",
+    "author": "Brian Reed",
+    "main": "hello-world-app.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/BRReed/hello-relativepath"
+    },
+    "private": false,
+    "scripts": {
+        "start": "node hello-world-app.js"
+    },
+    "dependencies": {
+        "express": "4.18.2"
+    }
+}
