@@ -10,7 +10,8 @@
     },
     "private": false,
     "scripts": {
-        "start": "node hello-world-app.js"
+        "start-hello": "node hello-world-app.js",
+        "start-second": "node second-app.js"
     },
     "dependencies": {
         "express": "4.18.2"
