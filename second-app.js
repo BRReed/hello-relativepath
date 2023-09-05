@@ -7,7 +7,9 @@ function incrementSeconds() {
 }
 
 app.get('/',function(req,res){
-    res.send("This app has been up for " + seconds + " seconds.")
+    res.send("This app has been up for " + seconds + " seconds.");
 })
 
 var cancel = setInterval(incrementSeconds, 1000);
+
+app.listen(8080);
