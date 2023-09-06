@@ -28,5 +28,4 @@ fi
 
 npm install
 
-node hello-world-app.js&
-node second-app.js&
+npm start
