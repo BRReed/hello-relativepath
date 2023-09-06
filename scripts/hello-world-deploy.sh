@@ -28,4 +28,4 @@ fi
 
 npm install
 
-node hello-world-app.js
+npm start
