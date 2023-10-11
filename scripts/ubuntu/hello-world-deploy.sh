@@ -1,14 +1,22 @@
 #!/bin/sh
 
-if ( dpkg -l | grep npm ) && ( dpkg -l | grep node )
+if ( apt-cache show npm )
 then
-  echo "npm and node are in packages list"
+  echo "npm is in packages list"
 else
-  echo "cannot find npm or node in packages list, updating package list"
+  echo "cannot find npm, updating package list"
   sudo DEBIAN_FRONTEND=noninteractive apt update
 fi
 
-if ( which npm )
+if ( apt-cache show nodejs )
+then
+  echo "nodejs is in packages list"
+else
+  echo "cannot find nodejs, updating packages list"
+  sudo DEBIAN_FRONTEND=noninteractive apt update
+fi
+
+if ( dpkg -s npm )
 then
   echo "-> npm is installed"
 else
@@ -16,7 +24,7 @@ else
   sudo apt install npm -y
 fi
 
-if ( which node )
+if ( dpkg -s nodejs )
 then
   echo "-> nodejs is installed"
 else
