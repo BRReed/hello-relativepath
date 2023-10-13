@@ -32,6 +32,30 @@ else
   sudo apt install nodejs -y
 fi
 
+if [ -f ./hello-world-app.js ]
+then 
+  echo "-> hello-world-app.js exists"
+else
+  echo "-> Getting hello-world-app.js"
+  curl -L -o hello-world-app.js https://raw.githubusercontent.com/BRReed/hello-relativepath/main/hello-world-app.js
+fi
+
+if [ -f ./second-app.js ]
+then
+  echo "-> second-app.js exists"
+else
+  echo "-> Getting second-app.js"
+  curl -L -o second-app.js https://raw.githubusercontent.com/BRReed/hello-relativepath/main/second-app.js
+fi
+
+if [ -f ./package.json ]
+then
+  echo "-> package.json exists"
+else
+  echo "-> Getting package.json"
+  curl -L -o package.json https://raw.githubusercontent.com/BRReed/hello-relativepath/main/package.json
+fi
+
 if ( npm ls )
 then
   echo "Dependencies have been installed"
